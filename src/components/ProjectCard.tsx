@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface ProjectProps {
   title: string;
@@ -17,7 +18,8 @@ export default function ProjectCard({ title, description, image, github, demo }:
       whileTap={{ scale: 0.95 }}
       className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
     >
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <Image src={image} alt= "profile" width={500} height={300}/>
+
       <div className="p-4">
         <h3 className="text-xl font-semibold text-white">{title}</h3>
         <p className="text-gray-400 text-sm">{description}</p>
