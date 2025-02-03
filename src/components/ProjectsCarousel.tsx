@@ -15,16 +15,19 @@ const ProjectsCarousel = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       const querySnapshot = await getDocs(collection(db, "projects"));
-      const projectsData: Iprojects[] = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        description: doc.data().description,
-        imageUrl: doc.data().imageUrl,
-        liveUrl: doc.data().liveUrl,
-        backendRepoUrl: doc.data().backendRepoUrl,
-        frontendRepoUrl: doc.data().frontendRepoUrl,
-        techStack: Array.isArray(doc.data().techStack) ? doc.data().techStack : [],
-        title: doc.data().title,
-      }));
+      const projectsData: Iprojects[] = querySnapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          description: data.description || "",
+          imageUrl: data.imageUrl || "/placeholder.jpg",
+          liveUrl: data.liveUrl || "",
+          backendRepoUrl: data.backendRepoUrl || "",
+          frontendRepoUrl: data.frontendRepoUrl || "",
+          techStack: Array.isArray(data.techStack) ? data.techStack : typeof data.techStack === "string" ? data.techStack.split(",") : [],
+          title: data.title || "Projet sans titre",
+        };
+      });
       setProjects(projectsData);
     };
 
