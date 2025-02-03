@@ -57,7 +57,7 @@ export default function Navbar() {
               height={40}
               className="rounded-full"
             />
-            <h1 className="ml-2 text-white font-bold">Savage</h1>
+            <h1 className="ml-2 text-white font-bold">Marvin B. | Web Developer</h1>
           </div>
         </Link>
         <div className="space-x-4">
