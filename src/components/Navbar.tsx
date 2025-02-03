@@ -21,7 +21,6 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(`Intersection observed: ${entry.target.id} - Is Visible: ${entry.isIntersecting}`);
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
         } else if (entry.target.id === activeSection) {
