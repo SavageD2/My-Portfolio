@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -25,7 +26,7 @@ const About = () => {
         <div className="text-center md:text-left">
           <h2 className="text-3xl font-bold mb-4">À propos de moi</h2>
           <p className="text-lg leading-relaxed">
-            Je suis un développeur web passionné, avec un parcours diversifié
+          Je suis un développeur web passionné, avec un parcours diversifié
             dans le domaine de la programmation et du développement logiciel. Après
             avoir suivi plusieurs formations en développement web, notamment au
             CEFIM, à la WidCodeSchool et sur Udemy, j'ai acquis des compétences
@@ -48,6 +49,8 @@ const About = () => {
           </p>
           <a
             href="https://drive.google.com/file/d/12AVbTaU7JxONxXVd89M3AvbvA3KAp60G/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             download="Développeur fullstack Marvin.pdf"
             className="mt-6 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
           >

@@ -34,6 +34,7 @@ export default function Navbar() {
 
     return () => observer.disconnect();
   }, [activeSection]);
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -45,12 +46,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 w-full p-4 transition-all ${scrolled ? "bg-black shadow-lg" : "bg-transparent"}`}
-      style={{
-        zIndex: 1000,
-      }}
-    >
+    <nav className={`fixed top-0 fixed top-0 w-full p-4 transition-all ${scrolled ? "bg-black shadow-lg" : "bg-transparent"}`}
+    style={{ zIndex: 1000 }}>
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <div className="flex items-center">
@@ -88,3 +85,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+

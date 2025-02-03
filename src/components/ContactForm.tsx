@@ -21,23 +21,27 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
     try {
-      const docRef = await addDoc(collection(db, "messages"), {
+      await addDoc(collection(db, "messages"), {
         name,
         email,
         message,
         timestamp: new Date(),
       });
-      console.log("Message envoyé avec succès :", docRef.id);
+  
       setSuccess(true);
+      setName("");
+      setEmail("");
+      setMessage("");
     } catch (error) {
-      console.error("Erreur lors de l'envoi du message :", error);
-      setSuccess(false);
+      setSuccess(false && error);
     } finally {
       setIsSubmitting(false);
     }
   };
+  
+  
 
   return (
     <motion.section id="contact" className="py-16 px-8 bg-gray-800 min-h-screen pt-24"> 
