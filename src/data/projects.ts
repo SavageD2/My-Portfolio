@@ -1,9 +1,10 @@
-export const projects = [
-    {
-      id: 1,
-      title: "Todo List",
-      description: "",
-      image: "https://avatars.githubusercontent.com/u/23335733?v=4",
-      github: "",
-      demo: "",
-    } ];
+export interface Iprojects {
+  id: string;
+  description: string;
+  imageUrl: string;
+  liveUrl: string;
+  backendRepoUrl: string;
+  frontendRepoUrl: string;
+  techStack: string[];
+  title: string;
+}

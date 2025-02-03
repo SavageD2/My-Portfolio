@@ -13,10 +13,10 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-    if (!isClient) return null;
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  if (!isClient) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,7 +40,7 @@ export default function ContactForm() {
   };
 
   return (
-    <motion.section id="contact" className="py-16 px-8 bg-gray-800">
+    <motion.section id="contact" className="py-16 px-8 bg-gray-800 min-h-screen pt-24"> 
       <h2 className="text-3xl font-bold text-center text-white mb-8">Contactez-moi</h2>
       <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg">
         <div className="mb-4">
@@ -50,7 +50,7 @@ export default function ContactForm() {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full p-3 mt-1 border border-gray-300 rounded-lg"
+            className="w-full p-3 mt-1 border border-gray-300 rounded-lg text-gray-800"
             required
           />
         </div>
@@ -61,7 +61,7 @@ export default function ContactForm() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 mt-1 border border-gray-300 rounded-lg"
+            className="w-full p-3 mt-1 border border-gray-300 rounded-lg text-gray-800"
             required
           />
         </div>
@@ -71,7 +71,7 @@ export default function ContactForm() {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full p-3 mt-1 border border-gray-300 rounded-lg"
+            className="w-full p-3 mt-1 border border-gray-300 rounded-lg text-gray-800"
             rows={5}
             required
           />
