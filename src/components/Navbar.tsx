@@ -51,7 +51,7 @@ export default function Navbar() {
         <Link href="/">
           <div className="flex items-center">
             <Image
-              src="/marvin.jpg"
+              src="/images/Marvin.jpg"
               alt="Marvin"
               width={40}
               height={40}

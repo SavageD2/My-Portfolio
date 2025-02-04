@@ -16,7 +16,7 @@ const About = () => {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
           <Image
-            src="/marvin.jpg"
+            src="/images/Marvin.jpg"
             alt="Marvin, développeur web"
             width={160}
             height={160}
