@@ -20,8 +20,8 @@ const Footer = () => {
 
   return (
     <motion.footer
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 50 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: showFooter ? 1 : 0 }}
       transition={{ duration: 0.5 }}
       className="bg-gray-800 text-white py-6 w-full"
     >
