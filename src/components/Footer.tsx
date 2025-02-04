@@ -23,7 +23,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 50 }}
       transition={{ duration: 0.5 }}
-      className="bg-gray-800 text-white py-6 fixed bottom-0 w-full"
+      className="bg-gray-800 text-white py-6 w-full"
     >
       <div className="container mx-auto text-center">
         <p className="flex justify-center items-center gap-2 text-lg">
